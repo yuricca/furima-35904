@@ -2,7 +2,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
   ZENKAKU_REGEX = /\A[ぁ-んァ-ン一-龥]+\z/.freeze
   KANA_REGEX = /\A[ァ-ヶー－]+\z/.freeze
 
