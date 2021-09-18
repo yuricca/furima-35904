@@ -6,7 +6,7 @@ class OrderAddress
     validates :post_code, format: { with: /\A[0-9]{3}-[0-9]{4}\z/, message: 'is invalid. Include hyphen(-)' }
     validates :town, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'is invalid. Input full-width characters.' }
     validates :house_number
-    validates :phone_number, format: { with: /\A[0-9]+\z/ }
+    validates :phone_number, format: { with: /\A[0-9]{10,11}\z/ }
     validates :item_id
     validates :user_id
     validates :token
